@@ -10,4 +10,8 @@ router.get('/get', function (req, res, next) {
    res.json({'user': '1231'});
 });
 
+router.get('/get/:id', function(req, res, next) {
+    res.json({"user": "user id is req.id"})
+})
+
 module.exports = router;
