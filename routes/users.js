@@ -11,7 +11,7 @@ router.get('/get', function (req, res, next) {
 });
 
 router.get('/get/:id', function(req, res, next) {
-    res.json({"user": "user id is req.id"})
+    res.json({"user": "user id is req.id123123123"})
 })
 
 module.exports = router;
