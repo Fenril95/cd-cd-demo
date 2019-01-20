@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -35,18 +37,18 @@ if(process.env.NODE_ENV === 'production') {
     //
     app.get('*', (req, res) => {
         res.sendfile(path.join(__dirname = 'public/build/index.html'));
-    })
+    });
 }
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/public/public/index.html'));
-})
+});
 
 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404))
+  next(createError(404));
 });
 
 // error handler
