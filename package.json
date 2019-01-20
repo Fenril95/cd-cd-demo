@@ -9,7 +9,8 @@
     "server": "nodemon ./bin/www",
     "client": "npm start --prefix public",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public",
+    "test": "npm run test --prefix public"
   },
   "dependencies": {
     "concurrently": "^4.1.0",
